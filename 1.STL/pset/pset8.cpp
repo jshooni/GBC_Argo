@@ -54,12 +54,9 @@ int main(void){
                     flag = true; 
                 }    
             }
-
             // V[str[j]-'a']++;     
-            S[str[j]-'a'] = true;
-            
+            S[str[j]-'a'] = true;   
         }
-        
     }
 
     cout << N-count ; 
