@@ -20,6 +20,8 @@
 * 이 알고리즘을 구현할 때 가장 큰 차이점은, 그래프 탐색의 경우 어떤 노드를 방문했었는지 여부를 반드시 검사 해야 한다는 것이다.
  * 이를 검사하지 않을 경우 무한루프에 빠질 위험이 있다.
 
+## DFS 예시
+!(DFS_example)(https://velog.velcdn.com/images%2Fcha-suyeon%2Fpost%2F6bf05f89-fd71-4395-9827-d63b6438d1b5%2Fimage.png);
 
 # BFS (Breadth-First Search) 너비우선 탐색
 * 그래프에서 가까운 노드부터 우선적으로 탐색하는 알고리즘
