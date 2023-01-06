@@ -74,7 +74,7 @@ int main(void) {
             }
         }
         if (s.top() == vec[i]){
-            s.pop(); 
+            s.pop();
             V.push_back("-");
         }
 

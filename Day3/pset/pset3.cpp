@@ -21,6 +21,7 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include <string>
 #include <stack>
 using namespace std;
 
@@ -29,7 +30,8 @@ int main(void){
 	cin.tie(0);
     int N;
     cin >> N; 
-    char str[N][50]={'0',};
+
+    char str[N][51];
     stack<char> st; 
 
     for(int i=0; i<N; i++){
@@ -42,15 +44,17 @@ int main(void){
         bool flag= false;
 
         for(int j=0; j<strlen(str[i]); j++){
-            if(str[i][j]== '(') st.push('('); 
-            else{
-                if(st.empty()){
+            if(str[i][j]== '(' ) st.push('('); 
+
+            else if (str[i][j]== ')') {// ')'
+                if(st.empty() || st.top()== ')'){
                     cout << "NO"<< endl;
                     flag = true; 
                     break;
                 }
-                st.pop(); 
+                else if(st.top() == '(') st.pop(); 
             }
+
         }
 
         // for(int j=0; j<k; j++){

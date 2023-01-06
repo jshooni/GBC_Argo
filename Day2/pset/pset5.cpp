@@ -24,6 +24,10 @@ int main(void) {
     cin >> k; 
     
     
+    die.push(k);
+    
+    k+=k; 
+    if(k>N)
     
     
 

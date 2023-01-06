@@ -22,6 +22,13 @@
 
 ## DFS 예시
 ![DFS_example](https://velog.velcdn.com/images%2Fcha-suyeon%2Fpost%2F6bf05f89-fd71-4395-9827-d63b6438d1b5%2Fimage.png)
+![DFS_example2](https://velog.velcdn.com/images%2Fcha-suyeon%2Fpost%2Fa5ae30d6-0a49-433f-a15b-9d78dab6f471%2Fimage.png)
+![DFS_example2](https://velog.velcdn.com/images%2Fcha-suyeon%2Fpost%2F8c38ced5-3e7c-4a6b-9eb5-d87c26ff132f%2Fimage.png)
 
 # BFS (Breadth-First Search) 너비우선 탐색
 * 그래프에서 가까운 노드부터 우선적으로 탐색하는 알고리즘
+* BFS는 큐 자료구조를 이용
+ * > 탐색 시작 노드를 큐에 삽입하고 방문 처리
+ * > 큐에서 노드를 꺼낸 뒤에 해당 노드의 인접 노드 중에는 방문하지 않은 노드를 모두 큐에 삽입하고 방문 처리
+ * > 더 이상 2번의 과정을 수행할 수 없을 때까지 반복
+ 
