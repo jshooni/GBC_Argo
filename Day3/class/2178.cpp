@@ -1,6 +1,5 @@
 /*
 미로 탐색 문제임. 
-
 4 6
 101111
 101010
@@ -50,10 +49,8 @@ void BFS() {
             value[ny][nx] = value[curr_y][curr_x] + 1 ; 
             Q.push({nx, ny}) ; 
         }
-        
     }
 }
-
 int main(void) { 
     cin >> R >> C ; 
 

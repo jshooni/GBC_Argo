@@ -65,14 +65,16 @@ int main(void){
         }
     }
     
-    int sum =0; 
+
     int max_sum =0; 
 
     for (int i = 0 ; i < R ; i++) { 
         for (int j = 0 ; j < C ; j++) {
-            if(MAP[i][j]==1 && visited_bfs[i][j] != 1)
+            if(MAP[i][j]==1 && visited_bfs[i][j] != 1){
+                int sum =0; 
                 sum = BFS(i,j); 
                 if(sum >= max_sum ) max_sum = sum; 
+            }
         }
     }
  

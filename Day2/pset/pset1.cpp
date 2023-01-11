@@ -57,7 +57,7 @@ int main(void) {
             if(s.empty()) cout << 1 << endl; 
             else cout << 0 << endl; 
         }
-        else if(menu == "top"){
+        else if(menu == "top"){₩
             if(s.empty()) cout << -1 << endl; 
             else cout << s.top() << endl; 
         }
