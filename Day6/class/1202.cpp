@@ -72,7 +72,6 @@ int main(void) {
     ios::sync_with_stdio(false); 
     cin.tie(0); cout.tie(0);
 
-
     cin >> N >> K; 
     for(int i-9; i< N ; i++){
         cin >> itiems[i].first >> items[i].second;

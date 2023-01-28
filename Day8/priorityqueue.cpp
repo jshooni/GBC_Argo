@@ -18,7 +18,7 @@ int main(void) {
         int k = pq.top();
         pq_small.push(k) ; 
         cout << k << ' ' ;
-        pq.pop()
+        pq.pop();
     }
 
     cout << endl; 

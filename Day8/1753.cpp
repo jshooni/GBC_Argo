@@ -27,18 +27,14 @@ void dijsktra(void){
     PQ.push( {0, start} );
 
     // 4. 이제 각 간선들로의 무게를 부여할거야. 
-    int next_node;
-    int next_weight;
-    int curr_weight;
-    int curr_node;
     while( !PQ.empty() ){
-        curr_weight = -PQ.top().first; 
-        curr_node = PQ.top().second;
+        int curr_weight = -PQ.top().first; 
+        int curr_node = PQ.top().second;
         PQ.pop(); // 현재에다가 저장을 했으니까 pop을 해야겠지. 
         
         for(int i=0; i< graph[curr_node].size(); i++){
-            next_node = graph[curr_node][i].first; // to . 
-            next_weight = graph[curr_node][i].second; // weight .             
+            int next_node = graph[curr_node][i].first; // to . 
+            int next_weight = graph[curr_node][i].second; // weight .             
             if( (curr_weight + next_weight) < DIST[next_node] ){
                 DIST[next_node] = curr_weight + next_weight;
                 PQ.push( { -DIST[next_node], next_node }); 

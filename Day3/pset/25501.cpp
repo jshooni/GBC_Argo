@@ -7,17 +7,26 @@
 어떤 문자열이 팰린드롬인지 판별하는 문제는 재귀 함수를 이용해 쉽게 해결할 수 있다. 
 아래 코드의 isPalindrome 함수는 주어진 문자열이 팰린드롬이면 1, 팰린드롬이 아니면 0을 반환하는 함수다.
 */
+/*
+isPalindrome ? -> 0 or 1
+the number of calling recursion 
 
+
+*/
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
-
-int recursion(const char *s, int l, int r){ //( 문자열 포인터, 0"l" , 문자열 길이-1 "r")
+char str[1001][1001];
+int recursion(const vector *s, int l, int r){ //( 문자열 포인터, 0"l" , 문자열 길이-1 "r")
     if(l >= r) return 1; // stop condition
     else if(s[l] != s[r]) return 0; // stop condition
     else return recursion(s, l+1, r-1); //  
 }
+// int recursion(const vector v, int l, int r){
+//     if(l => r) return 1; 
+//     else if(v[])
+// }
 
 int isPalindrome(const char *s){
     return recursion(s, 0, strlen(s)-1);
@@ -33,15 +42,28 @@ int main(void){
         cin >> str;
         V[i] = str;
     }
+
     for(int i=0; i<T; i++){
         cout << V[i] <<endl;
     }
 
-    
+    cout << "---------"     << endl; 
+    cout << V[1][3] << endl; 
+    cout << "----" << endl; 
     vector<string> ::iterator iter; // 주소값을 가리키는 .
-    for(iter = V.begin() ; iter != V.end() ; iter++) {
-        cout << *iter << ' ';
+
+    for(int i=0; i<T; i++){
+        iter = V[i].begin(); 
+        cout << recursion(&V[i], 0, V[i].size()-1) << " " ;
     }
+
+    cout << "응애 응애 " << endl; 
+    // vector<string> ::iterator iter; // 주소값을 가리키는 .
+
+    // for(iter = V.begin() ; iter != V.end() ; iter++) {
+    //     cout << *iter << ' ';
+    // }
+
 
 
 

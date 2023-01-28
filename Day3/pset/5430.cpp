@@ -13,22 +13,17 @@
 */
 
 #include <iostream>
-#include <cstring> 
 #include <string>
 #include <queue>
-
 #include <vector>
 using namespace std; 
 
-// int recursion(const char *s, int l, int r){ //( 문자열 포인터, 0"l" , 문자열 길이-1 "r")
-//     if(l >= r) return 1; // stop condition
-//     else if(s[l] != s[r]) return 0; // stop condition
-//     else return recursion(s, l+1, r-1); //  
-// }
-
-// int isPalindrome(const char *s){
-//     return recursion(s, 0, strlen(s)-1);
-// }
+/*
+[] 양쪽은 무시한 채 
+R 나오면 Reverse 'up' ->  뒤에서부터 삭제 
+D 나오면 REverse에 따라서 삭제 실시. 
+출력할 때는 그냥 앞뒤로 쭉쭉 출력하면되는거임.
+*/
 
 void R_func(string met){
     char a; 

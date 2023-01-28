@@ -1,51 +1,44 @@
 #include <iostream> 
 #include <vector>
+#include <queue>
 #include <stack> 
 
 using namespace std; 
-/*
 
-8 4 3 
+stack<int> s;
 
-*/
 int main(void){
-    
-    stack<int> s;
+
     int N; 
     cin >> N; 
-     
-    vector<int> v(N,0);
-    int arr[N];
-    bool flag= false; 
-    for(int i=0, a; i<N; i++){
-        arr[i] = i+1; 
-        cin >> a ; 
-        v.push_back(a); 
+    queue<int> QQ;
+    vector<char> vs; 
+    for(int i=0,a; i<N; i++){
+        cin >> a; 
+        QQ.push(a);
     }
     
-    int n=1; 
-    int i=0; 
-    while( n < N ){
-        s.push(n);
-        cout << '+' << endl;
-
-        while(1)
-            if(s.top() == arr[i++]){
+    int k=1; 
+    while( k <= N ){
+        s.push(k); 
+        vs.push_back('+'); 
+        while(1){
+            if( !s.empty() && s.top()==QQ.front() ) {
                 s.pop(); 
-                cout << '-' << endl; 
+                QQ.pop();
+                vs.push_back('-');
             }
-
-        if(s.empty() && n == N ){
-            flag =1; 
-            break; 
-        }        
+            else break; 
+        }
+        if(k++ > N) break; 
     }
 
-
-    
-
-    
-    
+    if(!s.empty()) cout << "NO" ;   
+    else {
+        for(int i=0; i<vs.size(); i++){
+            cout << vs[i] << '\n'; 
+        }
+    }
 
     return 0; 
 }
